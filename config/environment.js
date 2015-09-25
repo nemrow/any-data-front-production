@@ -22,7 +22,7 @@ module.exports = function(environment) {
       'img-src': "'self' *.googleapis.com maps.gstatic.com csi.gstatic.com",
       'style-src': "'self' 'unsafe-inline' fonts.googleapis.com maps.gstatic.com"
     },
-    firebase: 'https://booz-club.firebaseio.com/',
+    firebase: 'https://any-data-production.firebaseio.com/',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
