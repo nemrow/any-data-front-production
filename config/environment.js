@@ -3,6 +3,26 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'any-data-front-production',
+    googleMap: {
+      apiKey: 'AIzaSyAz0l6x1gaD-gTHvNpEe7e31QWnl-Ob8-U',
+      libraries: ['places', 'geocode']
+    },
+    googleFonts: [
+      'Lato:700,300italic',
+      'Oswald:700,300'
+    ],
+    environment: environment,
+    contentSecurityPolicy: {
+      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
+      'connect-src': "'self' http://localhost:3000 wss://*.localhost:3000 https://booz-club-new-back-production.herokuapp.com https://s3-us-west-2.amazonaws.com/booz-club",
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-eval' *.googleapis.com maps.gstatic.com",
+      'font-src': "'self' fonts.gstatic.com",
+      'connect-src': "'self' maps.gstatic.com",
+      'img-src': "'self' *.googleapis.com maps.gstatic.com csi.gstatic.com",
+      'style-src': "'self' 'unsafe-inline' fonts.googleapis.com maps.gstatic.com"
+    },
+    firebase: 'https://booz-club.firebaseio.com/',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
